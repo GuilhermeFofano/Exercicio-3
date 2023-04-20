@@ -1,9 +1,9 @@
 <aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
 	
-    <aura:attribute name="result1" type="integer"></aura:attribute>
-    <aura:attribute name="actionName" type="integer"></aura:attribute>
+    <aura:attribute name="result1" type="double"></aura:attribute>
+    <aura:attribute name="actionName" type="double"></aura:attribute>
     
-    <lightning:card footer="grupo 09 todos os direitos reservados" title="app calc">
+    	<lightning:card footer="{!'Seu resultado é: '  + v.result1}" title="app calc">
         <lightning:input placeholder="insira o primeiro numero" aura:id="txt1" />
         <br/>
         <lightning:input placeholder="insira o segundo numero" aura:id="txt2" />
@@ -12,7 +12,7 @@
 		<lightning:button label="Subtração" onclick="{!c.subtracao}" />
 		<lightning:button label="Multiplicação" onclick="{!c.multiplicacao}" />
         <lightning:button label="Divisão" onclick="{!c.divisao}" /> <br/>
-        {!v.actionName}  {!v.result1}
+          
     </lightning:card>
       
     
